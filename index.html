@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css" >
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <script src="js/bootstrap.min.js" ></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 " >
+
+    <link href="https://fonts.googleapis.com/css?family=Anton|Oswald" rel="stylesheet">
+    <title>Appvise Mark I</title>
+    <!-- Font awesome -->
+	<script src="https://use.fontawesome.com/63be5e72af.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+
+</head>
+<body class="container">
+
+<section id="Form_Web" class="container-fluid row">
+	<div  id="headerAll">What is your&nbsp;<span style="color:green;">website</span> worth?</div><br/>
+<input type="number" class="form-control" id="PageAmount" placeholder="Enter the amount of pages your site consists of." class="col-lg-5" required >
+<input type="number" class="form-control" id="Traffic" placeholder="Enter your monthly user traffic" required>
+<input type="number" class="form-control" id="Bounce"  placeholder="Enter the bounce rate of your site (%)" required>
+<input type="number" class="form-control" id="AdsPerPage"  placeholder="Enter the # of ads per page on your site." required>
+<input type="number" class="form-control" id="LastMonth"  placeholder="Enter the amount of user traffic last month." required>
+<input type="submit" id="submit" value="Calculate" class="btn btn-success" onclick="speculateWebApp()" >
+
+    <div id="results"></div>
+</section>
+
+<section id="Form_IOS" class="container-fluid col-md-6">
+   	<div  id="headerAll">What is your&nbsp;<span style="color:green;">iOS app</span> worth?</div>
+    <input type="number" class="form-control" placeholder="Enter the amount of installs per Month " id="IPM_IOS" required>
+    <input type="number" class="form-control" placeholder="Enter the average cost of a micro-transaction in your app (leave blank if none)" id="ILM_IOS">
+    <input type="number" class="form-control" placeholder="Enter the amount of ads displayed in one session"  id="APS_IOS" required>
+    <input type="number" class="form-control" placeholder="Enter the amount of active users monthly"  id="ActiveUsers_IOS" required>
+    <input type="number" class="form-control" placeholder="Enter the price of your app in the store (optional)"  id="COI_IOS">
+    
+    <input type="submit" id="submit_IOS" value="Calculate" class="btn btn-success" onclick="speculateIOSApp()">
+    <div id="results_IOS"></div>
+
+</section>
+
+<section id="Form_Android" class="container-fluid col-md-6">
+  	
+   	<div  id="headerAll">What is your&nbsp;<span style="color:green;">Android app</span> worth?</div>
+    <input type="number" class="form-control" placeholder="Enter the amount of installs per month" required id="IPM_Android">
+    <input type="number" class="form-control" placeholder="Enter the average cost of a micro-transaction in your app (leave blank if none)" id="ILM_Android" >
+    <input type="number" class="form-control" placeholder="Enter the amount of ads displayed in one session"  id="APS_Android" required >
+    <input type="number" class="form-control" placeholder="Enter the amount of active users monthly"  id="ActiveUsers_Android" >
+    <input type="number" class="form-control" placeholder="Enter the price of your app in the store (leave blank if free)" required id="COI_Android"  >
+    <!-- button -->
+    <input type="submit" id="submit_Android" class="btn btn-success" value="Calculate" onclick="speculateAndroidApp()">
+    <!-- -->
+    <div id="results_Android"></div>
+
+</section>
+
+
+<section id="banner" class="container">
+
+
+<div id="logo">
+    <img src="css/logo.fw.png"/>
+</div>
+
+<div id="text">
+		<div class="row">
+			<div class="col-md-12 text-center">Discover the true <b style="color:green;">worth</b> of your application.
+			<br/> <hr />
+			<span style="color:black;">NOTE: If you don't know the answers to one or more of the questions,<br> Quickly register your site with Google Analytics and grab the desired data.</span></div>
+		</div>
+</div>
+
+<div class="row" id="Choices">
+  <button id="IOS_Choice" class="btn btn-primary" onclick="show_IOS()"><i class="fa fa-apple fx-2x" aria-hidden="true"></i>&nbsp;iOS Applications</button>
+   <button id="Android_Choice" class="btn btn-primary" onclick="show_Android()"><i class="fa fa-android fx-2x fa-inverse" aria-hidden="true"></i>&nbsp;Android Applications</button>
+  <input type="button" id="WEB_Choice" value="Web Applications / Sites" class="btn btn-primary" onclick="show_WEB()" > 
+   <button id="WEB_Choice" class="btn btn-primary" onclick="show_WEB()"><i class="fa fa-html5 fx-2x" aria-hidden="true"></i>&nbsp;Website / Application </button>
+ </div>
+ 
+
+
+
+<script src="app.js">
+
+
+</script>
+
+</body>
+<footer>2016 © Sqript</footer>
+</html>

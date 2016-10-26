@@ -24,8 +24,9 @@
 </head>
 <body class="container">
 
-<section id="Form_Web" class="container-fluid row">
-	<div  id="headerAll">What is your&nbsp;<span style="color:green;">website</span> worth?</div><br/>
+<section id="Form_Web" class="">
+<div><span id="headerAll">Calculate your&nbsp;<span style="color:green;">website</span> value:</span><br/>
+</div>
 <input type="number" class="form-control" id="PageAmount" placeholder="Enter the amount of pages your site consists of." class="col-lg-5" required >
 <input type="number" class="form-control" id="Traffic" placeholder="Enter your monthly user traffic" required>
 <input type="number" class="form-control" id="Bounce"  placeholder="Enter the bounce rate of your site (%)" required>
@@ -37,7 +38,7 @@
 </section>
 
 <section id="Form_IOS" class="container-fluid col-md-6">
-   	<div  id="headerAll">What is your&nbsp;<span style="color:green;">iOS app</span> worth?</div>
+   	<span id="headerAll">Calculate your&nbsp;<span style="color:green;">iOS app</span> value:</span>
     <input type="number" class="form-control" placeholder="Enter the amount of installs per Month " id="IPM_IOS" required>
     <input type="number" class="form-control" placeholder="Enter the average cost of a micro-transaction in your app (leave blank if none)" id="ILM_IOS">
     <input type="number" class="form-control" placeholder="Enter the amount of ads displayed in one session"  id="APS_IOS" required>
@@ -51,7 +52,7 @@
 
 <section id="Form_Android" class="container-fluid col-md-6">
   	
-   	<div  id="headerAll">What is your&nbsp;<span style="color:green;">Android app</span> worth?</div>
+   	<span id="headerAll">Calculate your&nbsp;<span style="color:green;">Android app</span> value:</span>
     <input type="number" class="form-control" placeholder="Enter the amount of installs per month" required id="IPM_Android">
     <input type="number" class="form-control" placeholder="Enter the average cost of a micro-transaction in your app (leave blank if none)" id="ILM_Android" >
     <input type="number" class="form-control" placeholder="Enter the amount of ads displayed in one session"  id="APS_Android" required >
@@ -69,26 +70,30 @@
 
 
 <div id="logo">
-    <img src="css/logo.fw.png"/>
+    <img src="css/logo.fw.png" class="img-responsive"/>
 </div>
 
 <div id="text">
 		<div class="row">
-			<div class="col-md-12 text-center">Discover the true <b style="color:green;">worth</b> of your application.
+			<div class="col-md-12 text-center"><h3>Discover the true <b style="color:green;">worth</b> of your application.</h3>
 			<br/> <hr />
-			<span style="color:black;">NOTE: If you don't know the answers to one or more of the questions,<br> Quickly register your site with Google Analytics and grab the desired data.</span></div>
+			</div>
 		</div>
 </div>
 
-<div class="row" id="Choices">
-  <button id="IOS_Choice" class="btn btn-primary" onclick="show_IOS()"><i class="fa fa-apple fx-2x" aria-hidden="true"></i>&nbsp;iOS Applications</button>
-   <button id="Android_Choice" class="btn btn-primary" onclick="show_Android()"><i class="fa fa-android fx-2x fa-inverse" aria-hidden="true"></i>&nbsp;Android Applications</button>
+<!-- Buttons -->
+<div id="Choices">
+ <div class="row">
+ 	<div class="">
+	  <button id="IOS_Choice" class="btn btn-primary" onclick="show_IOS()"><i class="fa fa-apple fx-2x" aria-hidden="true"></i>&nbsp;</button>
+	 </div>
+ </div>
+   <button id="Android_Choice" class="btn btn-primary" onclick="show_Android()"><i class="fa fa-android fx-2x fa-inverse" aria-hidden="true"></i>&nbsp;</button>
   <input type="button" id="WEB_Choice" value="Web Applications / Sites" class="btn btn-primary" onclick="show_WEB()" > 
-   <button id="WEB_Choice" class="btn btn-primary" onclick="show_WEB()"><i class="fa fa-html5 fx-2x" aria-hidden="true"></i>&nbsp;Website / Application </button>
+   <button id="WEB_Choice" class="btn btn-primary" onclick="show_WEB()"><i class="fa fa-html5 fx-2x" aria-hidden="true"></i>&nbsp; </button>
  </div>
  
-
-
+	</section>
 
 <script src="app.js">
 
